@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>E-Pharmacy</title>
+    </head>
+    <body>
+        <!-- <div class="wrapper"> -->
+        <div class="sidebar">
+            <div class="logo">
+                <h2>E-Pharmacy</h2>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <span class="icon">
+                            <i class="fas fa-tachometer-alt"></i>
+                        </span>
+                        <span class="item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"
+                            ><i class="fas fa-briefcase-medical"></i
+                        ></span>
+                        <span class="item">Medicine</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"
+                            ><i class="fas fa-shopping-bag"></i
+                        ></span>
+                        <span class="item">Purchase</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"
+                            ><i class="fas fa-hand-holding-usd"></i
+                        ></span>
+                        <span class="item">Bill</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"
+                            ><i class="fas fa-layer-group"></i
+                        ></span>
+                        <span class="item">Stock</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"
+                            ><i class="fas fa-database"></i
+                        ></span>
+                        <span class="item">Expense</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                         <span class="icon"
+                            ><i class="fas fa-chart-line"></i
+                        ></span>
+                        <span class="item">Reports</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"
+                            ><i class="fas fa-user-shield"></i
+                        ></span>
+                        <span class="item">Accounts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-cog"></i></span>
+                        <span class="item">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="nav">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+
+                <div class="nav_list">
+                    <a href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        
+        <div class="tableContainer">
+            <h1>Medicine Table</h1>
+            <div class="wrapper">
+            <form action="">
+                <input class="searchField" type="text" placeholder="Search medicine" name="search">
+                <button class="searchButton" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <button class="button"><a href="#popup">Add Medicine</a></button>
+             </div>
+
+            <table class="tableMain">
+                <tr class="tableRow">
+                    <th>ID</th>
+                    <th>Medicine</th>
+                    <th>Type</th>
+                    <th>Company</th>
+                    <th>Stock</th>
+                    <th></th>
+                </tr>
+
+                <tr class="tableRow">
+                    <td data-title="id">001</td>
+                    <td data-title="name">Napa Extra</td>
+                    <td data-title="type">Tablet</td>
+                    <td data-title="company">Beximco</td>
+                    <td data-title="stock">500</td>
+                    <td class="select">
+                        <a class="icon" href="#"><i class="fas fa-edit"></i></a>
+                        <a class="icon" href="#"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="tableRow">
+                    <td data-title="id">002</td>
+                    <td data-title="name">Ace Plus</td>
+                    <td data-title="type">Tablet</td>
+                    <td data-title="company">Square</td>
+                    <td data-title="stock">400</td>
+                    <td class="select">
+                        <a class="icon" href="#"><i class="fas fa-edit"></i></a>
+                        <a class="icon" href="#"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr>
+                <tr class="tableRow">
+                    <td data-title="id">003</td>
+                    <td data-title="name">Biozinc</td>
+                    <td data-title="type">Syrup</td>
+                    <td data-title="company">Ibn Sina</td>
+                    <td data-title="stock">200</td>
+                    <td class="select">
+                        <a class="icon" href="#"> <i class="fas fa-edit"></i></a>
+                        <a class="icon" href="#"><i class="fas fa-trash"></i></a>
+                    </td>
+                </tr class="tableRow">
+            </table>
+        </div>
+
+        <div class="overlay" id="popup">
+            <div class="formWrapper">
+                <h2>Add New Medicine</h2>
+                <a class="close" href="#">&times;</a>
+                <form>
+                    <div class="inputbox">
+                        <input type="text" name="" required="" />
+                        <label>Medicine Name</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="" />
+                        <label>Type</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="" />
+                        <label>Company</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="" required="" />
+                        <label>Stock</label>
+                    </div>
+                    <div class="selectBox">
+                        <select class="option">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                          </select>
+                    </div>
+                    <button class="button">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+:root {
+  --primary: #457dc3;
+  --secondary: #4885cf;
+  --dark: #333;
+  --dark-blue: #23395d;
+  --dark-grey: #555;
+  --grey: #7987a1;
+  --grey2: #aebacf;
+  --light-grey: #dee2e9;
+  --light: #f0f0f0;
+  --white: #fff;
+  --green: #5cb484;
+  --red: #ef5455;
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background: #ffffff;
+}
+
+.sidebar {
+  background: rgb(47, 50, 51);
+  position: fixed;
+  width: 225px;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.sidebar .logo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sidebar .logo h2 {
+  color: #ffffff;
+  margin: 5px 0 5px;
+}
+
+.sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid #879aa8;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+}
+
+.sidebar ul li .item {
+  margin-left: 15px;
+}
+
+.sidebar ul li a .icon {
+  color: #dee4ec;
+  width: 30px;
+  display: inline-block;
+}
+
+.sidebar ul li a:hover {
+  color: #0cb18d;
+  background: white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+
+.sidebar ul li a:hover .icon {
+  color: #0cb18d;
+}
+
+/* Navbar */
+.nav {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
+}
+
+.nav .top_navbar {
+  background: rgb(47, 50, 51);
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.nav .top_navbar .hamburger a {
+  font-size: 18px;
+  color: #f4fbff;
+}
+
+.nav .top_navbar .hamburger a:hover {
+  color: #a2ecff;
+}
+
+.nav .top_navbar .nav_list {
+  margin-left: 85%;
+  display: flex;
+}
+
+.nav .top_navbar .nav_list a {
+  font-size: 18px;
+  color: #f4fbff;
+  padding-left: 25px;
+}
+
+.nav .top_navbar .nav_list a:hover {
+  color: #a2ecff;
+}
+
+/* Table */
+.tableContainer h1 {
+  text-align: center;
+  font-weight: 300;
+}
+
+.tableContainer {
+  width: 70%;
+  margin-top: 30px;
+  margin-left: 330px;
+}
+
+.tableMain {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  display: table;
+  width: 100%;
+}
+
+.tableRow {
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+td {
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #202932;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+td,
+th {
+  padding: 20px;
+}
+
+.select .icon {
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(26, 156, 139);
+  padding: 5px;
+}
+
+.select .icon:hover {
+  color: rgb(128, 9, 9);
+}
+
+.tableContainer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableContainer .button {
+  background-color: rgb(54, 185, 168);
+  border: none;
+  float: right;
+  padding: 10px 25px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 2px;
+}
+
+.tableContainer .button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.tableContainer .button:hover {
+  background-color: rgb(40, 167, 150);
+  transition: 0.5s;
+}
+
+.tableContainer .searchField {
+  background-color: rgb(235, 241, 241);
+  border: none;
+  padding: 12px 10px;
+  width: 300px;
+  appearance: none;
+  border-radius: 2px;
+  font-size: 12px;
+  outline: none;
+}
+
+.tableContainer .searchButton {
+  background-color: rgb(235, 241, 241);
+  padding: 12px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.tableContainer .searchButton:hover {
+  color: rgb(26, 156, 139);
+}
+
+/* Form */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.formWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: #ffff;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.formWrapper h2 {
+  margin: 0 0 40px;
+  padding: 0;
+  color: rgb(32, 30, 30);
+  text-align: center;
+}
+
+.formWrapper .inputbox {
+  position: relative;
+}
+
+.formWrapper .inputbox input {
+  width: 100%;
+  padding: 10px 0px;
+  font-size: 16px;
+  color: rgb(37, 34, 34);
+  margin-bottom: 30px;
+  border: 0.01px solid rgb(255, 255, 255);
+  border-radius: 2px;
+  outline: none;
+  background-color: rgb(242, 247, 247);
+  margin-bottom: 32px;
+}
+
+.formWrapper .inputbox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 10px;
+  font-size: 14px;
+  color: rgb(102, 99, 99);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.formWrapper .inputbox input:focus ~ label,
+.formWrapper .inputbox input:valid ~ label {
+  top: -35px;
+  left: -8px;
+  color: #2faab1;
+  font-size: 16px;
+}
+
+.formWrapper .selectBox .option {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  background-color: rgb(242, 247, 247);
+  color: rgb(102, 99, 99);
+  outline: none;
+  border: none;
+  margin-bottom: 20px;
+  padding: 10px 10px;
+  border-radius: 2px;
+}
+
+.formWrapper .selectBox .option:hover option,
+.formWrapper .selectBox .option:focus option {
+  color: #2faab1;
+}
+
+.formWrapper .button {
+  background-color: rgb(66, 179, 187);
+  padding: 10px 20px;
+  color: #ffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin: 0 auto;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.formWrapper .button:hover {
+  background-color: rgb(187, 66, 44);
+}
+
+.formWrapper .close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.formWrapper .close:hover {
+  color: #c42a2a;
+  transition: 0.5s;
+}
